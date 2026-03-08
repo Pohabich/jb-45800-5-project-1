@@ -1,0 +1,75 @@
+﻿body {
+    background-color: darkseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+/* Layout */
+#container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+}
+
+#charts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    grid-row: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+nav {
+    grid-row: 2;
+    text-align: center;
+}
+
+main {
+    grid-row: 3;
+}
+
+footer {
+    grid-row: 4;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Elements */
+label {
+    font-weight: bold;
+}
+
+.title {
+    /*margin: 10px 0;*/
+    font-size: larger;
+    font-weight: bold;
+    color: grey;
+}
+
+.chart {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+    border: 4px solid lightgrey;
+    border-radius: 25px;
+}
+
+img {
+    float: left;
+    width: 150px;
+    margin-right: 15px;
+}
+
+/* typical phone screen resolution */
+@media only screen and (max-width : 667px) {
+    .chart {
+        max-width: 450px;
+    }
+    img {
+        width: 50px;
+    }
+}

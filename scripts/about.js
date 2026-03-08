@@ -1,0 +1,3 @@
+﻿setHeader()
+setFooter()
+drawMenu('About')

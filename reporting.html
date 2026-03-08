@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="styles/styles.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!--Next 2 lines PDF saver required-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+    <!--Charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script defer src="sources/appData.js"></script>
+    <script defer src="scripts/general.js"></script>
+    <script defer src="scripts/reporting.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="container">
+        <header></header>
+
+        <nav></nav>
+
+        <main>
+            <label class="title">Charts</label>
+            <div id="charts">
+                <canvas id="pie" class="chart"></canvas>
+                <canvas id="bar" class="chart"></canvas>
+            </div>
+            <br />
+            <br />
+            <label class="title">Reports</label>
+            <div class="row container-fluid mt-3">
+                <div class="row">
+                    <form id="saveToFileForm" onsubmit="saveToFile(event)" class="row">
+                        <label for="fileType" class="col m-3 form-label">Save expenses to </label>
+                        <select id="fileType" class="col m-3 form-select" required></select>
+                        <input id="btnSave" type="submit" value="Save" class="col m-3 btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+</html>
